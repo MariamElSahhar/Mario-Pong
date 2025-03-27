@@ -1,3 +1,31 @@
+# 🏓 Welcome to Mario-Pong!
+This game is a throwback to the classic Pong game, with a Mario design twist. Play alone or with a friend (or three!) by cloning and following the [usage instructions](#usage).
+# Features
+## UX/UI
+- Profile settings to upload avatar, opt in/out of 2FA, and update username, email, and password
+- Ability to search for other players, view their online/offline status, and check out their dashboards
+- Add/remove friends
+- Stats and game history
+## Gameplay
+- Options for local single-player, local two-player, local four-player, and remote two-player Pong
+- 3D effects for Pong
+- Online TicTacToe game
+## Security
+- Json Web Token stored as HTTP-only cookies
+- Two-factor authentication using email OTPs
+
+# Tech Stack
+## Frontend
+- Vanilla JavaScript and HTML
+- Bootstrap and CSS
+- Three.js
+## Backend
+- Django REST Framework for REST APIs and WebSockets
+- PostgreSQL database
+## DevOps
+- Docker Compose for containerization
+- Nginx
+
 # Usage
 ## Running on Docker
 1. Run `make docker-up` in root
