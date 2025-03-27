@@ -1,3 +1,6 @@
+
+https://github.com/user-attachments/assets/95926311-79b7-475a-9729-62c6cc0d4836
+
 # 🏓 Welcome to Mario-Pong!
 This game is a throwback to the classic Pong game, with a Mario design twist. Play alone or with a friend (or three!) by cloning and following the [usage instructions](#usage).
 # Features
