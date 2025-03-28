@@ -48,3 +48,9 @@ This game is a throwback to the classic Pong game, with a Mario design twist. Pl
 2. Run `make run-db`. This runs the PostgreSQL container and maps the database to ``data/`` in the repository. `data/` is in `.gitignore` and won't be uploaded to Git.
 3. Run `make run-backend`
 4. Backend API is available through `http://127.0.0.1:8000/`
+
+# Improvements
+- Implementing rate limiting or throttling
+- Improving responsiveness, cross-browser compatibility, and accessibility
+- Using WebSockets for TicTacToe to reduce server load
+- Implementing friend requests and inviting friends to play games
