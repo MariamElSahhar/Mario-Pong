@@ -22,27 +22,27 @@ const routes = {
 		component: "landing-page",
 		path: "../pages/LandingPage.js",
 		protected: false,
-		title: "Pong | Landing Page",
+		title: "Mario-Pong | Welcome",
 	},
 	"/login": {
 		layout: "auth",
 		component: "login-page",
 		path: "../pages/auth/LoginPage.js",
 		protected: false,
-		title: "Pong | Log In",
+		title: "Mario-Pong | Log In",
 	},
 	"/sign-up": {
 		layout: "auth",
 		component: "sign-up-page",
 		path: "../pages/auth/SignUpPage.js",
 		protected: false,
-		title: "Pong | Sign Up",
+		title: "Mario-Pong | Sign Up",
 	},
 	404: {
 		component: "not-found-page",
 		path: "../pages/error/NotFoundPage.js",
 		protected: false,
-		title: "Pong | Not Found",
+		title: "Mario-Pong | Not Found",
 	},
 	// PROTECTED SCREENS
 	"/home": {
@@ -50,63 +50,63 @@ const routes = {
 		component: "home-page",
 		path: "../pages/HomePage.js",
 		protected: true,
-		title: "Pong | Homepage",
+		title: "Mario-Pong | Home",
 	},
 	"/dashboard": {
 		layout: "main",
 		component: "dashboard-page",
 		path: "../pages/dashboard/DashboardPage.js",
 		protected: true,
-		title: "Pong | My Dashboard",
+		title: "Mario-Pong | Dashboard",
 	},
 	"/play/single-player": {
 		layout: "main",
 		component: "local-game-page",
 		path: "../pages/pong/LocalGamePage.js",
 		protected: true,
-		title: "Pong | Single Player Game",
+		title: "Mario-Pong | Single Player Game",
 	},
 	"/play/two-player": {
 		layout: "main",
 		component: "local-game-page",
 		path: "../pages/pong/LocalGamePage.js",
 		protected: true,
-		title: "Pong | Local Two Player Game",
+		title: "Mario-Pong | Local Two Player Game",
 	},
 	"/play/remote": {
 		layout: "main",
 		component: "remote-game-page",
 		path: "../pages/pong/RemoteGamePage.js",
 		protected: true,
-		title: "Pong | Remote Game",
+		title: "Mario-Pong | Remote Game",
 	},
 	"/play/tournament": {
 		layout: "main",
 		component: "tournament-page",
 		path: "../pages/tournament/TournamentPage.js",
 		protected: true,
-		title: "Pong | Tournament",
+		title: "Mario-Pong | Tournament",
 	},
 	"/play/tictactoe": {
 		layout: "main",
 		component: "tictactoe-page",
 		path: "../pages/tictactoe/TictactoePage.js",
 		protected: true,
-		title: "Pong | Play Tictactoe",
+		title: "Mario-Pong | Play Tictactoe",
 	},
 	"/friends": {
 		layout: "main",
 		component: "friends-page",
 		path: "../pages/FriendsPage.js",
 		protected: true,
-		title: "Pong | My Friends",
+		title: "Mario-Pong | My Friends",
 	},
 	"/settings": {
 		layout: "main",
 		component: "settings-page",
 		path: "../pages/SettingsPage.js",
 		protected: true,
-		title: "Pong | Profile Settings",
+		title: "Mario-Pong | Settings",
 	},
 };
 
@@ -188,6 +188,7 @@ const loadRoute = async (route, layout) => {
 	try {
 		const root = document.getElementById("root");
 		const routeComponent = document.createElement(route.component);
+		document.title = route.title;
 		await import(route.path);
 		if (layout) {
 			let layoutComponent = document.querySelector(layout.component);
